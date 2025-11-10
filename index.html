@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martyn Gosling - Portfolio (Teal Theme)</title>
+    <style>
+        /* 1. Global Reset and Base Styles */
+        :root {
+            --primary-color: #008080; /* Bright blue accent for links/profile header */
+            --secondary-color: #008080; /* DEEP TEAL for Project Titles (New Color) */
+            --background-light: #ffffff; /* White/Light background */
+            --background-card: #f9f9f9; /* Off-white card background */
+            --text-dark: #333333; /* Main text color on light background */
+            --text-light: #666666; /* Secondary text color */
+            --border-color: #e0e0e0; /* Subtle border/divider color */
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* 2. Layout Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: var(--background-light);
+            padding: 0 20px;
+        }
+
+        /* 3. Header and Profile */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+
+        .contact-info {
+            font-size: 1em;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--text-dark);
+        }
+
+        .profile-section h2 {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .profile-section p {
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1.1em;
+        }
+
+        /* 4. Project Cards */
+        .project-section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: var(--background-card); 
+            color: var(--text-dark);
+            border: 1px solid #f0f0f0; 
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+        }
+
+        .project-section:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+        .project-section h2 {
+            color: var(--secondary-color); /* Uses the new Deep Teal color */
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9e9e9;
+        }
+
+        .project-section p {
+            margin-bottom: 20px;
+        }
+
+        .project-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid #ddd; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .project-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Martyn Gosling</h1>
+            <div class="contact-info">
+                Colchester, Essex | 07767 624985 | <a href="mailto:overnightimages@gmail.com">overnightimages@gmail.com</a>
+            </div>
+        </header>
+
+        <section class="profile-section">
+            <h2>Profile</h2>
+            <p>
+              For the last six years I have worked mainly for Metro Imaging building and maintaining their four Wordpress websites, as well as creating and managing their  Google and Meta PPC campaigns.  During the same period, as a freelance web developer, I have been priviledged to have created websites and html5 Ad campaigns for companies such as Netflix, Lego, Disney, Lionsgate and Amazon Prime Video.
+            </p>
+        </section>
+            <section class="project-section">
+            <h2>LEGO - Micro Website for promotional event, Nov 25</h2>
+            <p>I produced a simple one page website for Lego to host a map and instructions for a Holiday treasure trail activity. I hosted this on Cloudflare for webpage security and efficiency.
+                
+            </p>
+            <img src="lego.png" style="max-width: 600px;margin-left: 0;margin-right: 0;" alt="LEGO Cataclaws Holiday Hunt promotional image">
+        </section>
+        <section class="project-section">
+            <h2>Netflix, Black Mirror - Wordpress Website for series 7 launch, April 25</h2>
+            <p>As part of a publicity campaign for Netflix Black Mirror's season 7 launch, I created the complete Twebsite for the ficitional company TCKR Systems. Important parts of the brief were that it could handle 100K visitors in a day, and not be hacked. I handled this by hosting the website on a high powered AWS server, along with a Cloudflare professional account to block access to vulnerable url's, and to hide the origin server.
+            </p>
+            <p>Because the website was advertised on billboards at Picadilly Circus,this was perhaps the biggest, and certainly my most stressful project to date.</p>
+              <img src="tckrnow.png" alt="TCKR Systems website for Netflix">
+            <img src="tckr1.png" alt="TCKR Systems website for Netflix">
+            <img src="tckr5.png" alt="TCKR Systems website for Netflix">
+           
+          
+            
+        </section>
+
+    
+
+        <section class="project-section">
+            <h2>Amazon Prime Video, Champions League - HTML5 Ads, 2023-2024</h2>
+            <p>For one year I produced HTML5 Adverts for Amazon's German Champions League coverage. These were simple hand coded html5 responsive ads, with a left, right and top section.
+            </p>
+            <img src="cl1.png" alt="Screenshot of Amazon Prime Champions League ad on t-online.de">
+            <img src="cl2.png" alt="Screenshot of Amazon Prime Champions League ad t-online.de">
+           
+        </section>
+
+         <section class="project-section">
+            <h2>Disney Marvel, Thor Love and Thunder - HTML5 Animated Adverts, 2022</h2>
+            <p>
+                I created sets of animated html5 adverts for the home release of Disney Marvels Thor Love and Thunder in various sizes and for various countries. These adverts were largely created in Google Web Designer and served from Amazons Sizmek Studio. As you can see from the feedback for the overall campaign, the client was happy.
+            </p>
+            <img src="thor.jpg" alt="LinkedIn screenshot showing positive comments from professionals, including a Disney executive">
+        </section>
+
+        <section class="project-section">
+            <img src="disney-feedback.jpg" alt="LinkedIn screenshot showing positive comments from professionals, including a Disney executive">
+        </section>
+
+        <section class="project-section">
+            <h2>Lionsgate/Starzplay - Selection of HTML5 Animated Adverts, 2020 - 2022</h2>
+            <p>
+                I produced Animated HTML5 banner adverts in a variety of sizes, from mobile app to 'fireplace' adverts, for around 20 - 30 film and television productions.
+            </p>
+            <img src="elizabeth.png" alt="Screenshot of Starzplay advert">
+            <img src="thegreat.jpg" alt="Screenshot of Starzplay advert">
+               <img src="starzplay.jpg" alt="Screenshot of Starzplay advert">
+        </section>
+        <section class="project-section">
+            <h2>Disney Marvel, Venom and Carnage - HTML5 Animated Adverts, 2021</h2>
+            <p>
+                Produced animated HTML5 adverts, using supplied graphics, for the home video release of Disney Marvels Venom & Carnage.
+            </p>
+            <img src="venom.jpg" alt="Animated html5 ads for Venom and Carnage">
+            <img src="venomend.png" alt="Animated html5 ads for Venom and Carnage">
+        </section>
+         <section class="project-section">
+            <h2>Hatfields of Colchester - Magento 2 website</h2>
+            <p>
+                I manage and maintain the Magento 2 website for local business Hatfields of Colchester.
+            </p>
+           
+            <img src="hatfields.png" alt="Magento 2">
+        </section>
+          <section class="project-section">
+            <h2>Metro - Wordpress Website and Bespoke Ecommerce system</h2>
+            <p>
+                This encompasses producing the Metro Imaging website and also updating and maintaining a bespoke ecommerce system. The bespoke ecommerce system runs on a separate server for hacking prevention and is displayed to the public using proxy path reverse on a different Apache server.
+            </p>
+           
+            <img src="metro.png" alt="Website and Bespoke ecommerce">
+        </section>
+          <section class="project-section">
+            <h2>Bethell & Clark - Wordpress Website</h2>
+            <p>
+                I created this website for local business Bethell and Clark, and have built and maintained their websites for many years.
+            </p>
+           
+            <img src="bethell.png" alt="Website and Bespoke ecommerce">
+        </section>
+
+    </div>
+</body>
+</html>
